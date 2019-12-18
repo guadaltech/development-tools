@@ -2,10 +2,11 @@ from flask import Flask
 import random
 
 import ptvsd
+from os import path, getlogin, system, getuid, environ
 ptvsd.enable_attach()
-print("Wait for Attach...")
+system('echo "[PTVSD] Wait for Attach..."')
 ptvsd.wait_for_attach()
-print("Attach!")
+system('echo "[PTVSD] Attach..."')
 
 app = Flask(__name__)
 
